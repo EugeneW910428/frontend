@@ -2,9 +2,9 @@ import axios from 'axios';
 const formData = new FormData();
 formData.append('key', 'value');
 
-const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5001';
+const backendURL = process.env.REACT_APP_BACKEND_URL || 'https://autocourseplanner.herokuapp.com/api';
 
-fetch(`${backendURL}/api/schedule/generate`, {
+fetch(`${backendURL}/schedule/generate`, {
     method: 'POST',
     body: formData,
 });
