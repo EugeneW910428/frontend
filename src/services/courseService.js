@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5001/api'; // Adjust if needed
+const API_BASE_URL = 'https://autocourseplanner-daf765b75118.herokuapp.com'; // Adjust if needed
 
 // Function to generate the schedule
 export const generateSchedule = async (formData) => {
