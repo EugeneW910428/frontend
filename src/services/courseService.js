@@ -4,7 +4,7 @@ formData.append('key', 'value');
 
 const backendURL = process.env.REACT_APP_BACKEND_URL || 'https://autocourseplanner.herokuapp.com/api';
 
-fetch(`${backendURL}/schedule/generate`, {
+fetch(`${backendURL}/api/schedule/generate`, {
     method: 'POST',
     body: formData,
 });
