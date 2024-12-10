@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5001';
+const backendURL = process.env.REACT_APP_BACKEND_URL || 'https://autocourseplanner-daf765b75118.herokuapp.com/api';
 const API_BASE_URL = process.env.NODE_ENV === 'production'
     ? 'https://autocourseplanner-daf765b75118.herokuapp.com/api' // Your Heroku backend URL
     : 'http://localhost:5001/api'; // Local development URL
