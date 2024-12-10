@@ -1,6 +1,12 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://autocourseplanner-daf765b75118.herokuapp.com'; // Adjust if needed
+const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5001';
+
+fetch(`${backendURL}/api/schedule/generate`, {
+    method: 'POST',
+    body: formData,
+});
+
 
 // Function to generate the schedule
 export const generateSchedule = async (formData) => {
