@@ -1,4 +1,6 @@
 import axios from 'axios';
+const formData = new FormData();
+formData.append('key', 'value');
 
 const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5001';
 
@@ -11,7 +13,7 @@ fetch(`${backendURL}/api/schedule/generate`, {
 // Function to generate the schedule
 export const generateSchedule = async (formData) => {
     try {
-        const response = await axios.post(`${API_BASE_URL}/schedule/generate`, formData, {
+        const response = await axios.post(`${backendURL}/schedule/generate`, formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
             },
@@ -26,7 +28,7 @@ export const generateSchedule = async (formData) => {
 // Function to fetch courses (both core and elective) directly from the backend
 export const fetchCourses = async () => {
     try {
-        const response = await axios.get(`${API_BASE_URL}/courses`); // Ensure this endpoint is implemented in your backend
+        const response = await axios.get(`${backendURL}/courses`); // Ensure this endpoint is implemented in your backend
         return response.data; // The backend should handle fetching and classification
     } catch (error) {
         console.error('Failed to fetch courses:', error.message);
